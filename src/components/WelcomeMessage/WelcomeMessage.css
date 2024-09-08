@@ -1,0 +1,15 @@
+.welcome-message{
+    font-size: 35px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    opacity: 1;
+    transition: opacity 2s ease;
+}
+
+.fade-out {
+    opacity: 0; /* Gömmer meddelandet genom att sätta opaciteten till 0 */
+}
+
+.fade-in {
+    opacity: 1; /* Synlig */
+}

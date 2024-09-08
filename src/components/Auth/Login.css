@@ -1,0 +1,39 @@
+.btn-success {
+    background-color: rgb(113, 134, 87);
+    border-color: rgb(113, 134, 87);
+}
+
+.btn-success:hover {
+    background-color: #91a865;
+    border-color: #91a865;
+}
+
+.btn-success:active {
+    background-color: #5a6d3e;
+    border-color: #5a6d3e;
+}
+
+a {
+    color: #676767;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.form-label {
+    color: #555;
+    font-weight: 600;
+}
+
+.link-button {
+    background: none;
+    border: none;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: inherit;
+    font-family: inherit;
+    padding: 0;
+}

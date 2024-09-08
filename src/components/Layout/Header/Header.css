@@ -1,0 +1,51 @@
+/* src/Layout/Header/Header.css */
+
+.main-header {
+    background: linear-gradient(135deg, #2b2b2b, #1a1a1a);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    border-bottom: solid rgb(37, 37, 37);
+    font-family: 'Lato', sans-serif;
+    height: 60px;
+}
+
+.header-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+}
+
+.image {
+    height: 40px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.button-group {
+    display: flex;
+}
+
+.logout-button{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover{
+    background-color: rgba(255, 255, 255, 0.034);
+}
+
+.logout-button img {
+    width: 28px;
+    height: 28px;
+}

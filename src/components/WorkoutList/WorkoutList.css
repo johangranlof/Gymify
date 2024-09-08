@@ -1,0 +1,24 @@
+.workout-list-container {
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+.weight-image {
+    height: 34px;
+}
+
+.arrow-icon {
+    width: 25px;
+    transition: transform 0.3s ease;
+}
+
+.btn-link {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    border-radius: 50%;
+}
+
+.btn-link:hover .arrow-icon {
+    transform: translateX(5px);
+}

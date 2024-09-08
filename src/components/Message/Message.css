@@ -1,0 +1,18 @@
+.message {
+    padding: 5px;
+    color: white;
+    text-align: center;
+    transition: opacity 1s ease-in-out;
+}
+
+.message.error {
+    background-color: #f44336;
+}
+
+.message.success {
+    background-color: #4CAF50; 
+}
+
+.fade-out {
+    opacity: 0;
+}

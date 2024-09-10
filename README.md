@@ -8,7 +8,12 @@
   ## Description
   
   This is a web application where you can log workouts in real-time and track progress and development through statistical graphs.
-    
+
+  ## Screenshots
+  ![startsida](https://github.com/user-attachments/assets/a8c92913-5579-411f-afc1-f61ab0245e92)
+  ![log](https://github.com/user-attachments/assets/f319c236-9a55-4a11-819a-6c75898c4cfb)
+  ![stats](https://github.com/user-attachments/assets/2afadbfb-5f3c-4bcd-9680-50f2f78c6b3e)
+
   ## TODO
   
   <ul>

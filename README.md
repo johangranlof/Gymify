@@ -15,7 +15,8 @@
     <li>Add images for exercises</li>
     <li>Extend statistics</li>
     <li>Refine design</li>
-    <li>Add profile page with options to change information and options</li>
+    <li>Add profile page with options to change information and preferences</li>
+    <li>Add possibility to edit added data</li>
   </ul>
   
   ## Version History

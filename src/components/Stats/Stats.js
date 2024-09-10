@@ -44,14 +44,14 @@ const Stats = () => {
                                 workoutDate: new Date(workout.date)
                             }))
                     );
-
+    
                     const getWeekAndYear = (date) => {
                         const start = new Date(date.getFullYear(), 0, 1);
                         const days = Math.floor((date - start) / (24 * 60 * 60 * 1000));
                         const weekNumber = Math.ceil((days + 1) / 7);
                         return `${date.getFullYear()}-W${weekNumber}`;
                     };
-
+    
                     const weeklyData = allWorkoutExercises.reduce((acc, we) => {
                         const weekKey = getWeekAndYear(we.workoutDate);
                         if (!acc[weekKey]) {
@@ -60,12 +60,18 @@ const Stats = () => {
                         acc[weekKey].push(we.weight);
                         return acc;
                     }, {});
-
+    
                     const weeklyDataArray = Object.entries(weeklyData).map(([week, weights]) => ({
                         week,
                         weight: Math.max(...weights)
                     }));
-
+                    
+                    weeklyDataArray.sort((a, b) => {
+                        const [yearA, weekA] = a.week.split('-W').map(Number);
+                        const [yearB, weekB] = b.week.split('-W').map(Number);
+                        return yearA !== yearB ? yearA - yearB : weekA - weekB;
+                    });
+    
                     const percentageChange = weeklyDataArray.map((item, index, arr) => {
                         if (index === 0) return { week: item.week, percentageChange: 0 };
                         const previousWeight = arr[index - 1].weight;
@@ -75,7 +81,7 @@ const Stats = () => {
                             percentageChange: ((currentWeight - previousWeight) / previousWeight) * 100
                         };
                     });
-
+    
                     setChartData({
                         labels: weeklyDataArray.map(we => we.week),
                         datasets: [{
@@ -92,10 +98,11 @@ const Stats = () => {
                     console.error("Failed to fetch workout exercises", error);
                 }
             };
-
+    
             fetchWorkoutExercises(selectedExercise.id);
         }
     }, [selectedExercise, graphType, userId]);
+    
 
     const handleExerciseChange = (event) => {
         const exerciseId = parseInt(event.target.value, 10);

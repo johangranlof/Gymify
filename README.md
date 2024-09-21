@@ -1,7 +1,6 @@
 <div align="center">
   <img src="src/Assets/WorkoutGuy.png" alt="Logo" width="80" height="80">
   <h2>Gymify</h2>
-  <a href="https://gymify.site/">View Demo</a>
 </div>  
   <h3 align="center">Frontend part of Gymify - a web application written in React/JS HTML and CSS.</h3>
   
